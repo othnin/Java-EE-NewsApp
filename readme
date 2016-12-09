@@ -1,0 +1,9 @@
+Had to run the following from the asadmin to get the JMS working:
+
+asadmin> create-jms-resource --restype javax.jms.QueueConnectionFactory --description "connection factory for new factory" jms/NewMessageFactory
+Connector resource jms/NewMessageFactory created.
+Command create-jms-resource executed successfully.
+asadmin> create-jms-resource --restype javax.jms.Queue --property Name=PhysicalDestination jms/NewMessage
+Administered object jms/NewMessage created.
+Command create-jms-resource executed successfully.
+
