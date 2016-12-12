@@ -25,7 +25,7 @@ import util.Loggable;
  * @author achilles
  */
 @WebServlet(name = "ListNews", urlPatterns = {"/ListNews"})
-//@Loggable
+@Loggable
 public class ListNews extends HttpServlet {
 
     
@@ -53,7 +53,7 @@ public class ListNews extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ListNews</title>");            
+            out.println("<title>Servlet ListNews (listNews.java)</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet ListNews at " + request.getContextPath() + "</h1>");

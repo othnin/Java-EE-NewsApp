@@ -29,7 +29,7 @@ import util.Loggable;
  * @author achilles
  */
 @WebServlet(name = "PostMessage", urlPatterns = {"/PostMessage"})
-//@Loggable
+@Loggable
 public class PostMessage extends HttpServlet {
 
     @Resource(mappedName="jms/NewMessageFactory")

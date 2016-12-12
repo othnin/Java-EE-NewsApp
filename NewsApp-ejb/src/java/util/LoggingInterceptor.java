@@ -5,6 +5,7 @@
  */
 package util;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
@@ -32,7 +33,9 @@ public class LoggingInterceptor {
 
     @AroundInvoke
     private Object intercept(InvocationContext ic) throws Exception {
+        logger.setLevel(Level.FINER);
         logger.entering(ic.getTarget().getClass().getName(), ic.getMethod().getName());
+        System.out.println("Inside logging interceptor");
         try {
             return ic.proceed();
         } finally {

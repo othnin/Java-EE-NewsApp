@@ -27,7 +27,7 @@ import util.Loggable;
         @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue")
 })
 
-//@Loggable
+@Loggable
 public class NewMessage implements MessageListener {
     
     @Resource
